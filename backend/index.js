@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -209,9 +212,19 @@ app.post("/newOrder", async (req, res) => {
 
     res.send("Order saved!");
 });
+async function startServer() {
+    try {
+        await mongoose.connect(uri);
 
-app.listen(PORT, () => {
-    console.log("App started!");
-    mongoose.connect(uri);
-    console.log("DB started!");
-});
+        console.log("MongoDB connected successfully!");
+
+        app.listen(PORT, () => {
+            console.log(`App started on port ${PORT}`);
+        });
+
+    } catch (error) {
+        console.error("MongoDB connection failed:", error.message);
+    }
+}
+
+startServer();
