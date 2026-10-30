@@ -1,0 +1,36 @@
+{
+  "name": "zerodha-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.0",
+    "@mui/material": "^6.4.0",
+    "ajv": "8.20.0",
+    "ajv-keywords": "5.1.0",
+    "axios": "^1.7.9",
+    "chart.js": "^4.4.7",
+    "react": "^19.3.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
